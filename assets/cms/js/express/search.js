@@ -1,4 +1,5 @@
 /* eslint-disable no-new, no-unused-vars, camelcase */
+/* global ccmi18n_express, ccmi18n, ConcreteEvent, ConcreteAlert, ConcreteAjaxSearch */
 
 function ConcreteExpressEntryAjaxSearch($element, options) {
     var my = this

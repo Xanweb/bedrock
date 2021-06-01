@@ -1,4 +1,5 @@
 /* eslint-disable no-new, no-unused-vars, camelcase */
+/* global ccmi18n_express, ccmi18n */
 
 function ConcreteExpressEntrySelector($element, options) {
     var my = this

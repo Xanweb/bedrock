@@ -374,7 +374,7 @@
 
             if (!block) {
                 if (my.getDragAreas().length) {
-                    throw new Error('No block supplied')
+                    throw new Error(ccmi18n.noBlockSupplied)
                 }
                 elem = $('<div class="ccm-area-drag-area"/>')
                 drag_area = new Concrete.DragArea(elem, my, block)

@@ -1,9 +1,10 @@
 /* eslint-disable no-new, no-unused-vars, camelcase */
+/* global ccmi18n, ConcreteEvent, ConcreteAlert */
 
 function ConcreteCalendarEventSelector($element, options) {
     var my = this
     options = $.extend({
-        chooseText: 'Choose Event',
+        chooseText: ccmi18n.chooseEvent,
         loadingText: ccmi18n.loadingText,
         inputName: 'eventID',
         calendarID: 0,
@@ -63,7 +64,7 @@ ConcreteCalendarEventSelector.prototype = {
             url: CCM_DISPATCHER_FILENAME + '/ccm/calendar/event/get_json',
             data: { eventID: eventID },
             error: function(r) {
-                ConcreteAlert.dialog('Error', r.responseText)
+                ConcreteAlert.dialog(ccmi18n.error, r.responseText)
             },
             success: function(r) {
                 my.$element.html(my._eventLoadedTemplate({ inputName: my.options.inputName, event: r }))

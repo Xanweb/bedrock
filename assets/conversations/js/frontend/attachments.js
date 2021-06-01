@@ -2,16 +2,17 @@
 import Dropzone from 'dropzone/dist/dropzone'
 
 /* eslint-disable no-new, no-unused-vars, camelcase, eqeqeq */
+/* global ccmi18n_conversations */
 
 ;(function(global, $) {
     'use strict'
 
     var i18n = {
-        Too_many_files: 'Too many files',
-        Invalid_file_extension: 'Invalid file extension',
-        Max_file_size_exceeded: 'Max file size exceeded',
-        Error_deleting_attachment: 'Something went wrong while deleting this attachment, please refresh and try again.',
-        Confirm_remove_attachment: 'Remove this attachment?'
+        Too_many_files: ccmi18n_conversations.tooManyFiles,
+        Invalid_file_extension: ccmi18n_conversations.invalidFileExtension,
+        Max_file_size_exceeded: ccmi18n_conversations.maxFileSizeExceeded,
+        Error_deleting_attachment: ccmi18n_conversations.errorDeletingAttachment,
+        Confirm_remove_attachment: ccmi18n_conversations.confirmRemoveAttachment
     // Please add new translatable strings to the getConversationsJavascript of /concrete/controllers/frontend/assets_localization.php
     }
 

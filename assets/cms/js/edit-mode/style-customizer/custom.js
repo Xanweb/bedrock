@@ -1,4 +1,5 @@
 /* eslint-disable no-new, no-unused-vars, camelcase */
+/* global ccmi18n */
 
 function ConcreteStyleCustomizerCustomCss($element, options) {
     var my = this
@@ -16,7 +17,7 @@ function ConcreteStyleCustomizerCustomCss($element, options) {
             url: ''
         },
         i18n: {
-            editTitle: 'Custom CSS'
+            editTitle: ccmi18n.customCssDialogTitle
         }
     }, options || {})
     $element

@@ -1,4 +1,5 @@
 /* eslint-disable no-new, no-unused-vars, camelcase */
+/* global ccmi18n, ConcreteEvent */
 
 function ConcreteStyleCustomizerColorPicker($element, options) {
     var my = this
@@ -6,9 +7,9 @@ function ConcreteStyleCustomizerColorPicker($element, options) {
     my.options = $.extend(true, {
         initialColor: '',
         i18n: {
-            cancel: 'Cancel',
-            choose: 'Choose',
-            clear: 'Clean'
+            cancel: ccmi18n.cancel,
+            choose: ccmi18n.choose,
+            clear: ccmi18n.clean
         }
     }, options || {})
     $element.spectrum({

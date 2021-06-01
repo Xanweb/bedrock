@@ -4,7 +4,7 @@ import _ from 'underscore'
 window._ = _
 
 /* eslint-disable no-new, no-unused-vars, camelcase, eqeqeq */
-/* global ConcreteEvent */
+/* global ConcreteEvent, ccmi18n_conversations */
 
 /*
  * $.fn.concreteConversation
@@ -41,12 +41,12 @@ window._ = _
     })
 
     var i18n = {
-        Confirm_remove_message: 'Remove this message? Replies to it will not be removed.',
-        Confirm_mark_as_spam: 'Are you sure you want to flag this message as spam?',
-        Warn_currently_editing: 'Please complete or cancel the current message editing session before editing this message.',
-        Unspecified_error_occurred: 'An unspecified error occurred.',
-        Error_deleting_message: 'Something went wrong while deleting this message, please refresh and try again.',
-        Error_flagging_message: 'Something went wrong while flagging this message, please refresh and try again.'
+        Confirm_remove_message: ccmi18n_conversations.confirmRemoveMessage,
+        Confirm_mark_as_spam: ccmi18n_conversations.confirmMarkAsSpam,
+        Warn_currently_editing: ccmi18n_conversations.warnCurrentlyEditing,
+        Unspecified_error_occurred: ccmi18n_conversations.unspecifiedErrorOccurred,
+        Error_deleting_message: ccmi18n_conversations.errorDeletingMessage,
+        Error_flagging_message: ccmi18n_conversations.errorFlaggingMessage
         // Please add new translatable strings to the getConversationsJavascript of /concrete/controllers/frontend/assets_localization.php
     }
     $.fn.concreteConversation.localize = function(dictionary) {
